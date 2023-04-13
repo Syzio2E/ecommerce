@@ -1,14 +1,15 @@
 import React from "react";
 import './Header.css'
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <React.Fragment>
     <div className="wrapper">
-      <a href="/home">Home</a>
-      <a href="/home">Store</a>
-      <a href="/home">About</a>
-      <a href="/home">Cart</a>
+      <Link to="/home">Home</Link>
+      <Link to="/store">Store</Link>
+      <Link to="/about">About</Link>
+      <a href="/cart">Cart</a>
     </div>
     <div className="second-header">
         <h2>The Generics</h2>

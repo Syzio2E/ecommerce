@@ -3,13 +3,16 @@ import './Footer.css'
 
 const Footer = () => {
   return (
-    <div className='footer bg-color-skyblue'>
+    <div className='container'>
       <h2>The generics</h2>
-      <div className='Logo'>
-      <div>Logo 1</div>
-      <div> Logo 2</div>
-      <div>Logo 3</div>
-      </div>
+      <table>
+        <tr>
+          <th>Logo 1</th>
+          <th>Logo 2</th>
+          <th>Logo 3</th>
+        </tr>
+      </table>
+      
     </div>
   )
 }

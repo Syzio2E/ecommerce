@@ -1,13 +1,18 @@
 import React, { Fragment } from "react";
+import './ItemGrid.css'
 
 const ItemGrid = (props) => {
   return (
     <Fragment>
       <div key={props.id}>
-        <div>{props.title}</div>
+        <h2>{props.title}</h2>
         <img src={props.image} alt="merch" />
-        <div>${props.price}</div>
-        <button>Add to Cart</button>
+        <div className="flex-container">
+          <span>${props.price}</span>
+          <span>
+            <button>Add To Cart</button>
+          </span>
+        </div>
       </div>
     </Fragment>
   );

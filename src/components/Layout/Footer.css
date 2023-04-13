@@ -1,10 +1,21 @@
-.footer{
+.container{
     background-color: skyblue;
     display: flex;
-    padding: 20px;
+    justify-content: row;
+    height: 210px;
+    
 }
-
+h2{
+    font-weight: 200px   ;
+}
+p{
+    padding-left: 40px;
+    display: flex;
+    width: 90%;
+    
+}
 .Logo{
+    height: 80px;
    padding: 20px;
     align-items: center;
     justify-content: space-between;
