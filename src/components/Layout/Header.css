@@ -1,0 +1,25 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    justify-content: space-around;
+    color: white;
+    height: 50px;
+    align-items: center;
+    
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.second-header{
+    height: 200px;
+    display: flex;
+    background-color: grey;
+    text-align: center;
+    justify-content: center;
+    font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 65px;
+    color: white;
+}

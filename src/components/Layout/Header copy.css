@@ -8,6 +8,10 @@
     align-items: center;
     
 }
+a{
+    text-decoration: none;
+    color: white;
+}
 
 .second-header{
     height: 200px;
