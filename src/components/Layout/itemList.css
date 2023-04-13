@@ -4,9 +4,15 @@
     gap: 20px;
     padding-left: 20px;
     justify-content: center;
+   
   }
 
   h1{
     display: flex;
     justify-content: center;
+  }
+
+  .item-grid button{
+   display: flex;
+   align-items: center;
   }

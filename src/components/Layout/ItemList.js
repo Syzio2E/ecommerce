@@ -55,6 +55,7 @@ return (
        />
 ))}
 </div>
+<button >See The Cart</button>
 </div>
 )
 }
