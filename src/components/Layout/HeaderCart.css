@@ -1,0 +1,28 @@
+.cartButton {
+    height: 10px;
+    width: 15px;
+    cursor: pointer;
+    font: inherit;
+    border: 1px blue solid;
+    background-color: black;
+    color: white;
+    padding: 17px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    font-weight: bold;
+  }
+  
+  button:hover,
+  button:active {
+    background-color: red;
+  }
+  .badge {
+    background-color: blue;
+    padding: 0.25rem 1rem;
+    border-radius: 25px;
+    margin-left: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+  }  

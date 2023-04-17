@@ -1,10 +1,12 @@
 import React from 'react'
+import classes from './Modal.css'
+
+
 
 const Card = (props) => {
+
   return (
-    <div>
-      
-    </div>
+    <div className='card'>{props.children}</div>
   )
 }
 

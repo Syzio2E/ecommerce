@@ -3,7 +3,7 @@
     display: flex;
     justify-content: row;
     height: 210px;
-    
+    margin-top: 20px;
 }
 h2{
     font-weight: 200px   ;

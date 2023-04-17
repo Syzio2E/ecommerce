@@ -1,52 +1,52 @@
 import React from 'react'
+import Modal from '../UI/Modal'
+import { useContext } from 'react'
+import './Cart.css'
 
-const cartElements = [
-    {
-        title: 'Colors',    
-        price: 100,
-        imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%201.png',
-        quantity: 2,
-    },
-    {
-        title: 'Black and white Colors',
-        price: 50,
-        imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%202.png',
-        quantity: 3,
-    },
-    {
-        title: 'Yellow and Black Colors',
-        price: 70,
-        imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%203.png',
-        quantity: 1,
-    }
-]
+import CartContext from '../Shop/cart-context'
+
 
 const Cart = (props) => {
-  return (
-    <React.Fragment>
-        <h2>Cart</h2>
-        {cartElements.map((cartElement,index)=>{
-            return <div key={index}>
-                <div>
-                    <table>
-                        <tr>
-                            <th>Item</th>
-                            <th>quantity</th>
-                            <th>Amount</th>
-                        </tr>
-                        <tr>
-                            <td>{cartElement.title}</td>
-                            <td>{cartElement.quantity}</td>
-                            <td>{cartElement.price}</td>
-                            <td><button>Remove</button></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        })}
-    </React.Fragment>
-  )
-}
+  const cartCtx = useContext(CartContext)
+  const hasItems = cartCtx.items.length>0
+  const totalAmount = `${cartCtx.totalamount.toFixed(2)}`
+  const cartItemRemoveHandler = (id)=>{
+    cartCtx.removeItem(id)
+  }
+
+  
+    return (
+      <Modal onClose={props.onClose}>
+        <div>
+          <h2>Cart</h2>
+          
+          <table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Quantity</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    {cartCtx.items.map((item,id)=>(
+      <tr key={item.id}>
+        <td>{item.title}</td>
+        <td>{item.quantity}</td>
+        <td>{item.price}</td>
+        <td><button className='removeButton' onClick={()=>cartItemRemoveHandler(item.id)}>Remove</button></td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+        <div className='box'>Total Amount:<span>{totalAmount}</span></div>
+          {hasItems &&<button className='purchaseButton'>Purchase</button>}
+          <button className="closebutton" onClick={props.onClose}>X</button>
+        </div>  
+      </Modal>
+    )
+  }
+
 
 export default Cart
 
